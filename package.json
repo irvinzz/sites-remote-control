@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/irvinzz/sites-remote-control/issues"
   },
-  "homepage": "https://github.com/irvinzz/sites-remote-control#readme"
+  "homepage": "https://github.com/irvinzz/sites-remote-control#readme",
+  "dependencies": {
+    "node-firefox-connect": "^1.2.0"
+  }
 }
