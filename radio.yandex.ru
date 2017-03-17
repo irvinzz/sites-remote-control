@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(dirname "$0")"
+
 case "$1" in
     playpause)
 	CMD="Mu.Flow.togglePause();"

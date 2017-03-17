@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#Monkey version
+cd "$(dirname "$0")"
+
 case "$1" in
     playpause)
 	CMD='document.getElementById("head_play_btn").click();'
