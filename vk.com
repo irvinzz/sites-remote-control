@@ -13,5 +13,5 @@ case "$1" in
 	CMD='document.getElementById("pd_prev").click();'
     ;;
 esac
-node app.js music.yandex.ru "$CMD"
+node app.js vk.com "$CMD"
 exit 0
