@@ -2,14 +2,14 @@
 
 case "$1" in
     playpause)
-	CMD='{"selector":{"uri":"https://music.yandex.ru/"},"command":"(function(f){f.player.pause() || f.player.resume() || f.play()})(Mu.pages.player.flow);"}'
+	CMD='$(".player-controls__btn_play").first().click();'
     ;;
     next)
-	CMD='{"selector":{"uri":"https://music.yandex.ru/"},"command":"Mu.pages.player.flow.next();"}'
+	CMD='$(".player-controls__btn_next").first().click();'
     ;;
     prev)
-	CMD='{"selector":{"uri":"https://music.yandex.ru/"},"command":"Mu.pages.player.flow.prev();"}'
+	CMD='$(".player-controls__btn_prev").first().click();'
     ;;
 esac
-echo $CMD | nc -c localhost 32000
+node app.js music.yandex.ru "$CMD"
 exit 0

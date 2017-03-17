@@ -3,14 +3,14 @@
 #Monkey version
 case "$1" in
     playpause)
-	CMD='{"selector":{"uri":"://vk.com/"},"command":"document.getElementById(\"head_play_btn\").click();"}'
+	CMD='document.getElementById("head_play_btn").click();'
     ;;
     next)
-	CMD='{"selector":{"uri":"://vk.com/"},"command":"document.getElementById(\"pd_next\").click();"}'
+	CMD='document.getElementById("pd_next").click();'
     ;;
     prev)
-	CMD='{"selector":{"uri":"://vk.com/"},"command":"document.getElementById(\"pd_prev\").click();;"}'
+	CMD='document.getElementById("pd_prev").click();'
     ;;
 esac
-echo $CMD | nc -c localhost 32000
+node app.js music.yandex.ru "$CMD"
 exit 0
